@@ -25,7 +25,7 @@ def main():
 #SHELL>>
         _=ser.read_until()
         line1 = ser.read_until()
-        if not line1.startswith(b'SHELL build:'):
+        if not line1.startswith(b'SHELL build: '):
             raise SystemExit(f"Error: Improper Shell Format on Line 1: {line1}")
 
         line2 = ser.read_until()
